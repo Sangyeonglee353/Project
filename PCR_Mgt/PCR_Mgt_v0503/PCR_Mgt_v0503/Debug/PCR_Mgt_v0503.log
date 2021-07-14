@@ -1,0 +1,3 @@
+﻿  PCR_Mgt_v0503.c
+D:\mysources\C_PL\C_programing_I\PCR_Mgt_v0503\PCR_Mgt_v0503\PCR_Mgt_v0503.c(807,6): warning C4101: 'charge_time' :참조되지 않은 지역 변수입니다.
+  PCR_Mgt_v0503.vcxproj -> D:\mysources\C_PL\C_programing_I\PCR_Mgt_v0503\Debug\PCR_Mgt_v0503.exe

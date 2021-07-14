@@ -1,0 +1,5 @@
+﻿  PCR_managment_v0.1.c
+D:\mysources\C_PL\C_programing_I\PCR_management\PCR_management\PCR_managment_v0.1.c(14,12): error C2143: 구문 오류: '{'이(가) '상수' 앞에 없습니다.
+D:\mysources\C_PL\C_programing_I\PCR_management\PCR_management\PCR_managment_v0.1.c(14,12): error C2059: 구문 오류: '상수'
+  PCR_managment_v0.2.c
+  코드를 생성하고 있습니다...

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>코로나 격리 기간 판별기</title>
+	<link rel="stylesheet" href="css/nameList.css">
+</head>
+<body>
+  <div id="container">
+    <h1>코로나 격리 기간 판별기</h1>
+    <form action="">
+      <input type="text" id="userName" placeholder="이름" required autocomplete="off">
+      <button onclick="newRegister();return false;">판별</button>
+    </form>
+    <hr>
+    <div id="nameList"></div>
+
+    <ul>
+			<li>
+					<label for="oPrice">원래 가격</label> 
+					<input type="text" id="oPrice">원
+			</li>
+			<li>
+				<label for="rate">할인율</label>
+				<input type="text" id="rate">%
+			</li>
+			<li>
+					<button onclick="showPrice()">할인 가격 계산하기</button>
+			</li>
+		</ul>
+		<div id="showResult"></div>	
+  </div>
+
+	<script src="js/register-result.js"></script>
+</body>
+</html>

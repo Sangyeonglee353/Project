@@ -5,11 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>COVID-19 격리 기간</title>
-	<link rel="stylesheet" href="css/COVID_19.css">
+	<link rel="stylesheet" href="css/COVID19.css">
 </head>
 <body>	
 	<div id="contents">
-		<!--<img src="images/0127_COVID.png">-->
 		<h1>코로나19 격리 기간 판별</h1>
 
 		<h3>■ 예방 접종일</h3>
@@ -17,49 +16,61 @@
 			<li>
 				<label for="vaccinNumber">백신 회차</label> 
 				<select name="vaccinType" id="vaccinNumber">
-					<!--<option value="firstVaccin">1차 접종</option>-->
 					<option value="2차 접종">2차 접종</option>
 					<option value="3차 접종">3차 접종</option>
 				</select>
-		
+			</li>
+			
+			<li>
 				<label for="vaccinDate">접종일</label>
 				<input type="date" name="vaccinDate" id="vaccinDate">
 			</li>
+			
 			<li>
 				<button onclick="showState()">판별하기</button>
 			</li>
 		</ul>
 		<div id="showResult"></div>	
+
+		<h3>■ 격리 기간</h3>
+		<table id="isolation">
+			<tr>
+				<th id="confirmed">확진자</th>
+				<th id="closed">밀접접촉자</th>
+			</tr>
+			
+			<tr>
+				<td id="confirmedCase"></td>
+				<td id="closeContact"></td>
+			</tr>
+		</table>
+
+		<h3>■ 격리 해제일 계산</h3>
+		<ul>
+			<li>
+				<label for="startDate">격리 시작일</label>
+				<input type="date" name="startDate" id="startDate">
+			</li>
+			<li>
+				<button onclick="calcDate()">계산하기</button>
+			</li>
+		</ul>
+		<table>
+			<tr>
+				<th id="confirmedTwo">확진자</th>
+				<th id="closedTwo">밀접접촉자</th>
+			</tr>
+			
+			<tr>
+				<td id="confirmedDate"></td>
+				<td id="closeDate"></td>
+			</tr>
+		</table>
+
+		<h3>■ 격리 기준(2022.01.27)</h3>
+		<img src="images/0127_COVID.png" alt="">
 	</div>	
 		
-	<script>
-		function showState() {
-			var vType = document.querySelector('#vaccinNumber').value;  // 접종 회차
-			var vDate = document.querySelector('#vaccinDate').value; // 접종일
-			
-			// 경과일 계산
-			vDate = new Date(vDate);          // 사용자 입력 날짜를 Date 객체로 변환
-			var now = new Date();             // 오늘 날짜 정보를 Date 객체의 인스턴스 now 객체로 만듭니다.
-			var toNow = now.getTime();        // 오늘 날짜를 밀리초로 바꿈
-			var tovDate = vDate.getTime();    // 접종일을 밀리초로 바꿈
-			var passedTime = toNow - tovDate; // 접종일과 오늘 사이의 차이(밀리초 값)
-			var passedDay = Math.round(passedTime/(1000 * 60 * 60 * 24)); // 밀리초를 날짜 수로 변환한 후 반올림
-
-			// 접종완료자 판단
-			if ((vType == "2차 접종") && ((passedDay >= 14) && (passedDay <= 90))){
-				document.querySelector('#showResult').innerHTML = "당신은 접종완료자입니다.";
-			}
-			else if((vType == "2차 접종") && (passedDay < 14)){
-				document.querySelector('#showResult').innerHTML = "당신은 " + vType + " 후 " + passedDay + "일 경과하셔서 아직 미접종완료자입니다.";
-			}
-			else if(vType == "3차 접종"){
-				document.querySelector('#showResult').innerHTML = "당신은 접종완료자입니다.";
-			}
-			else{
-				document.querySelector('#showResult').innerHTML = "당신은 " + vType + " 후 " + passedDay + "일 경과하셔서 현재 미접종완료자입니다.";
-			}
-		}		
-
-	</script>
+	<script type="text/javascript" src="js/COVID19.js"></script>
 </body>
 </html>

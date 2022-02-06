@@ -1,0 +1,96 @@
+html{
+	background-color: #F0F0EF;
+}
+#contents {
+	width: 800px;
+	margin:0 auto;
+}
+#contents > img {
+	float:left;
+}
+ul {			
+	list-style: none;
+	padding:5px 0 0 0;
+}
+li {
+	margin-bottom:10px;
+	display:inline;
+}
+li > label {
+	width:80px;
+	/*float:left;*/
+	text-align:right;
+	position: relative;
+	margin: 0 0 0 10px;
+}
+li > select{
+	width:155px;
+	height:35px;
+	padding:5px 10px;
+	margin:0 5px 0 10px;
+	
+}
+input[type="date"]{
+	width:130px;
+	padding:5px 10px;
+	margin:0 5px 0 10px;
+}
+input[type="text"] {
+	width:110px;
+	padding:5px 10px;			
+	margin:0 5px 0 10px;
+}
+li:nth-child(3) {
+	margin-top:20px;
+	text-align: center;
+}
+button {
+	padding:5px 10px;
+	margin:0 0 0 10px;
+	border:1px solid #ccc;			
+	//border-radius:7px;
+	font-size:1em;
+}
+button:hover{
+	color: white;
+	background-color: #106caf;
+}
+#showResult {
+	margin-top:20px;
+	font-size:1.2em;
+	color: white;
+	font-weight: bold;
+	/*background-color: #106CAF;	*/
+	padding:10px;		
+}
+h1{
+	text-align:center;
+	font-family: '맑은 고딕', sans-serif;
+	font-size: 2.5em;
+	font-weight: bold;
+	color: #106CAF;
+}
+table{
+	width:100%;
+}
+#confirmed{
+	width:20%;
+	border-right: #e0e0e0 3px solid;
+}
+#confirmedTwo{
+	width:50%;
+	border-right: #e0e0e0 3px solid;
+}
+#confirmedCase{
+	border-right: #e0e0e0 3px solid;
+}
+#confirmedDate{
+	border-right: #e0e0e0 3px solid;
+}
+td{
+	text-align: center;
+	font-family: '맑은 고딕', sans-serif;
+	font-size: 2.0em;
+	font-weight: bold;
+	color: #106CAF;
+}

@@ -1,4 +1,4 @@
-## 2022 - 2학기 진행한 C언어 Term_project
+## 2021 - 2학기 진행한 C언어 Term_project
 
 ## 쇼핑몰 관리 프로그램
 
@@ -42,3 +42,4 @@
 
 ### 순서도(flowchart)
 
+![term_project_flowchart_211219](https://user-images.githubusercontent.com/46237147/156387262-4eeb972e-bf9f-4fb6-b9f3-c1331123bff0.png)

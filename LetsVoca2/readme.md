@@ -1,6 +1,7 @@
 ## **2021 - 2학기 진행한 Java Team_project**
 
 ## “이젠 해!! VOCA” 영어 어휘 테스트 프로그램
+![image](https://user-images.githubusercontent.com/46237147/208245163-3f990983-5d59-4878-a101-261b06653f77.png)
 
 ### 목적
 
@@ -46,3 +47,33 @@
     3.1 학습 목표 설정
     
     3.2 기간별 학습량 확인
+    
+ ### 흐름도(Flowchart)
+ ![Flowchart_211121](https://user-images.githubusercontent.com/46237147/208245286-199ab070-03bc-4771-8cc2-bee292d00c56.png)
+
+ ### 카드소팅
+ ![CardSorting](https://user-images.githubusercontent.com/46237147/208245302-552423c7-8d6d-45b5-a53c-b22812a54a2f.png)
+
+ ### E-R 다이어그램
+ - 개발 범위 축소 전
+![image](https://user-images.githubusercontent.com/46237147/208245421-d505be37-e435-4981-ae77-dead16ebac95.png)
+
+ - 개발 범위 축소 후
+![image](https://user-images.githubusercontent.com/46237147/208245433-0a4b9907-7a21-42af-8169-e4e61f757e6d.png)
+
+ ### 클래스 다이어그램
+ ![Class_diagram](https://user-images.githubusercontent.com/46237147/208245326-77107bec-303c-47eb-9cce-52592cd467ad.png)
+
+ ### 화면설계(일부)
+![슬라이드2](https://user-images.githubusercontent.com/46237147/208245529-6ed37cff-fc8b-4097-8418-acdfa84ced73.PNG)
+![슬라이드3](https://user-images.githubusercontent.com/46237147/208246579-db4740b2-e59a-448f-a0ab-a0bb6e488bf4.PNG)
+![슬라이드5](https://user-images.githubusercontent.com/46237147/208246583-38f3b1aa-d1f5-46e6-b030-eda30bd1d460.PNG)
+![슬라이드6](https://user-images.githubusercontent.com/46237147/208246594-8b665e0b-8b6b-4fd7-bf08-2dde4b52e01a.PNG)
+![슬라이드10](https://user-images.githubusercontent.com/46237147/208246600-ca5e545a-17d2-46e5-ac27-a82447c36978.PNG)
+![슬라이드13](https://user-images.githubusercontent.com/46237147/208246603-348573ef-b9c9-473d-ae75-23251b80085f.PNG)
+![슬라이드18](https://user-images.githubusercontent.com/46237147/208246682-18141ad0-18c5-4f45-8fec-a1b7c69cf1ca.PNG)
+![슬라이드25](https://user-images.githubusercontent.com/46237147/208246767-5e0412e2-a892-4c3f-b6a9-ce3718b23f7c.PNG)
+
+
+ 
+ 

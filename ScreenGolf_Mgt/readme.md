@@ -58,3 +58,4 @@
 7. 스크린 골프 게임
 
 ### **순서도(flowchart)**
+![첨부파일 1_스크린 골프장 매장 관리 프로그램 순서도](https://user-images.githubusercontent.com/46237147/208231356-cc06e6f8-368d-4b64-b7f7-07fe4b86b1a0.png)

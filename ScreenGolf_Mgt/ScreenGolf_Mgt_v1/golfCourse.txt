@@ -1,0 +1,5 @@
+course(50) 50
+course(100) 100
+grand 150
+perfect 200
+excellent 250

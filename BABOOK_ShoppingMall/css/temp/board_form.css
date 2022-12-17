@@ -1,0 +1,223 @@
+/* 기본 셋팅 */
+
+#content {
+  width : 1000px;
+  margin : 0 auto;
+}
+
+#content h1 {
+  color :rgb(75, 69, 69);
+  text-align : center;
+  font-size : 18pt;
+  padding-top : 20px;
+  margin-top : 15px;
+  margin-bottom : 15px;
+}
+
+#content strong {
+  font-size : 15pt;
+  margin-right : 5%;
+  width : 20%;
+  font-weight :400;
+  text-align : center;
+}
+
+.next_button_div {
+  display : flex;
+  height : 52.5px;
+  align-items : center;
+  flex-direction : row;
+  justify-content : center;
+}
+
+.next_button {
+  border : 0;
+  border-radius : 9px;
+  background-color : #768AC7;
+  width : 15%;
+  height : 60%;
+  margin-left : 5%;
+  margin-right : 2%;
+  color : rgba(255, 255, 255, 0.846);;
+  font-weight : bold;
+}
+
+.next_button:hover {
+  cursor : pointer;
+}
+/*
+.jump_button {
+  border : 0;
+  border-radius : 9px;
+  background-color :rgb(145, 175, 199);
+  width : 15%;
+  height : 60%;
+  margin-left : 2%;
+  color : rgba(255, 255, 255, 0.912);;
+  font-weight : bold; 
+}
+
+.jump_button:hover {
+  cursor : pointer;
+}
+*/
+.input_box {
+  width : 70%;
+  height : 70%;
+  text-align : center;
+  font-size : 15pt;
+}
+
+/* 책 정보 입력 */
+
+.book_information {
+  margin-top : 3%;
+  margin-left : 20%;
+  width : 60%;
+  border-bottom : solid rgb(166, 164, 164) 3px;
+  margin-bottom : 3%;
+  background : rgb(248, 248, 251);
+}
+
+.book_name, .author_name, .book_status, .book_category {
+  display : flex;
+  height : 52.5px;
+  flex-direction : row;
+  align-items : center;
+}
+
+.book_status label {
+  font-size : 15pt;
+  margin-right : 12%;
+}
+
+/* 수업 정보 입력 */
+
+.class_information {
+  display : none;
+  margin-left : 20%;
+  width : 60%;
+  border-bottom : solid rgb(166, 164, 164) 3px;
+  margin-bottom : 3%;
+  background : rgb(248, 248, 251);
+}
+
+.professor_name , .class_name , .semester_infor , .university_name{
+  height : 52.5px;
+  display : flex; 
+  flex-direction : row;
+  align-items : center;
+}
+
+.semester_text {
+  margin-right : 1.6% !important;
+}
+
+/* 책 이미지 정보 입력 */
+.img_information {
+  display : none;
+  margin-left : 20%;
+  width : 60%;
+  border-bottom : solid rgb(166, 164, 164) 3px;
+  margin-bottom : 3%;
+  background : rgb(248, 248, 251);
+}
+
+.book_img_container {
+  display : flex;
+  flex-direction : row;
+  justify-content : center;
+  justify-content : space-around;
+  margin-bottom : 15px;
+}
+
+.book_img_input {
+  width : 0px;
+  height : 0px;
+  opacity: 0;
+ }
+ 
+ .book_img_label {
+  display :flex;
+  flex-direction : row;
+  width: 130px;
+  height : 150px;
+  border: 2px dashed grey;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content : center;
+  align-items : center;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size : cover;
+ }
+
+.book_img_label:hover {
+  border: 2px solid rgb(143, 150, 167);
+}
+
+/* 책 판매 정보 입력 */
+
+.sale_information {
+  display : none;
+  margin-top : 3%;
+  margin-left : 20%;
+  width : 60%;
+  border-bottom : solid rgb(166, 164, 164) 3px;
+  margin-bottom : 3%;
+  background : rgb(248, 248, 251);
+}
+
+.price_unit {
+  position : relative;
+  right : 5%;
+  font-size : 15pt;
+  font-weight : bolder;
+  color : #bebebe;
+}
+
+.sale_price , .way_to_sale {
+  height : 52.5px;
+  display : flex; 
+  flex-direction : row;
+  align-items : center;
+}
+
+.way_to_sale label {
+  font-size : 14pt;
+  margin-right : 22.5%;
+}
+
+#dealing_place {
+  display : none; 
+  height : 52.5px;
+  flex-direction : row;
+  align-items : center;
+}
+
+#shipping_fee {
+  display : none;
+  height : 52.5px;
+  flex-direction : row;
+  align-items : center;
+}
+
+/* 추가설명 입력 */
+
+.additional_explanation {
+  display : none;
+  margin-top : 3%;
+  margin-left : 20%;
+  width : 60%;
+  border-bottom : solid rgb(166, 164, 164) 3px;
+  margin-bottom : 3%;
+  background : rgb(248, 248, 251);
+}
+
+.additional_explanation textarea {
+  padding : 10px;
+  font-size : 11pt;
+  width : 70%;
+  height : 180px;
+  margin-left : 15%;
+}

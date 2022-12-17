@@ -1,0 +1,20 @@
+h1 {
+    color: blue;
+}
+.logo{
+    border: 1px solid black;
+    width: 100px;
+}
+div{
+    border: 1px solid black;
+}
+ul li{
+    list-style-type:none;
+    display: inline; /* 가로 배치 */
+    float: left;  /* 가로 배치 */
+    outline: 1px dotted red;
+    padding: 5px;
+}
+.top{
+    margin-left:60%;
+}

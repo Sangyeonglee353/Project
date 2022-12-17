@@ -1,0 +1,143 @@
+/* 마진 패딩 초기화 */
+* { padding: 0; margin: 0; }
+/* 페이지 기본 글꼴과 크기 설정 */
+body { font-family: "본고딕";   font-size: 14px; }
+img { border: 0;}
+ul, li { list-style-type: none; }
+/* <a> 태그 기본 설정 */
+a { display: inline-block; text-decoration: none; }
+a:link { text-decoration:none; color: #222222; }
+a:hover { text-decoration:none; color: #222222; }
+a:visited { text-decoration:none; color: #222222; }
+a:active { text-decoration:none; color: #222222; }
+/* 상단 헤더 */
+#top { position: relative; width: 1000px; height: 40px; margin: 0 auto;}
+#top h3 { position: absolute; top: 25px; left: 40px; font-size: 16px; }
+#top #top_menu { float: right; margin: 30px 60px 0 0;}
+#top #top_menu li { display: inline; }
+
+#top #top_logo img.logo{ float: left; display:inline; margin-top: 50px; width:150px;}
+#top #top_searchbox{ 
+    margin:80px 0px 0px 30px; 
+    float:left; 
+    display: inline; 
+    border: 1px solid #768AC7;
+    border-radius: 5px;
+    width:500px;
+    height: 45px;
+}
+#top #top_searchbox select{
+    float:left;
+    display:inline;
+    width:100px;
+    height: 45px;
+    border: 0px;
+    background-color: #768AC7;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: white;
+    padding: 10px;
+    font-family:"본고딕";
+}
+#top #top_searchbox select option{
+    color: black;
+    background-color: white;
+    border:1px solid #768AC7;
+}
+#top #top_searchbox select option:hover{
+    color: white;
+    background-color: #768AC7;
+}
+
+#top #top_searchbox .select{
+    width: 100px;
+}
+#top #top_searchbox .select:hover .optionList{
+    opacity:1;
+    visibility: visible;
+}
+#top #top_searchbox .select:hover .option span::after{
+    content: "▲";
+    float:right;
+    animation: changeLetter 0.5s linear 1;
+}
+
+@keyframes changeLetter{
+    0% {
+        content: "▼";
+    }
+    49% {
+        content: "▲";
+        opacity:0;
+    }
+    50% {
+        content:"▲";
+        opacity: 0.1;
+    }
+    100% {
+        content: "▲";
+        opacity: 1;
+    }
+}
+
+#top #top_searchbox .option{
+    padding: 0.7rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #768AC7;
+    color:white;
+    font-family: "본고딕", han sans;
+}
+#top #top_searchbox span::after{
+    content: "▼";
+    float:right;
+}
+#top #top_searchbox .optionList{
+    width: 100px;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s linear, visibility 1s linear;
+}
+#top #top_searchbox .optionListItem{
+    height: 2rem;
+    padding: 1rem 0 0 1rem;
+    font-family: "본고딕", sans-serif;
+    overflow:hidden;
+    transition: all 0.8s;
+    cursor: pointer;
+}
+#top #top_serachbox .optionListItem:hover{
+    /*background-color: #768AC7;*/
+    background-color: rgba(223, 247, 179, 0.514);
+}
+
+/* optionListItem 선택 시 변경 */
+
+#top #top_searchbox input{
+    border: 0px;
+    width: 350px;
+    height: 45px;
+    padding-left: 10px;
+    outline:none;
+}
+#menu_bar { height: 48px; background-color: #443e58; font-size: 16px; }
+#menu_bar ul { width: 1000px; margin: 0 auto; padding: 14px 0 0 40px; }
+#menu_bar li { display: inline; margin-left: 90px; color: white; }
+#menu_bar a:link { color: white; }
+#menu_bar a:hover { color: white; }
+#menu_bar a:visited { color: white; }
+#menu_bar a:active { color: white; }
+/* 메인 이미지 */
+#main_img_bar { height: 230px; text-align: center; background-color: #2092aa; }
+#main_img_bar img { margin-top: 30px; }
+/* 하단 푸터 */
+footer { height: 100px; background-color: #2c2a29; }
+#footer_content { position: relative; width: 1000px; margin: 0 auto; color: #dddddd; }
+#footer_logo { position: absolute; top: 30px; left: 50px; font-size: 16px; }
+#footer_logo span { color: yellow; }
+#download { position: absolute; top: 20px; left: 400px; }
+#author { position: absolute; top: 20px; left: 700px; }

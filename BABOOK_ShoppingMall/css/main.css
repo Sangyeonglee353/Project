@@ -1,0 +1,199 @@
+.top{
+  height: 330px;
+}
+
+/* 수정 중*/
+#inner{
+  width: 1200px;
+  margin:0 auto;
+  z-index:0;
+  position:relative;
+  overflow:hidden;
+}
+
+#left{
+  width: 250px;
+  display:inline;
+  float:left;
+}
+#center{
+  display:inline;
+  float:left;
+  width: 900px;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+#center .slide{
+  /*display: flex;*/
+  width: 680px;
+  margin-top: 15px;
+  margin-left: 15px;
+  height: 330px;
+}
+
+.slides{
+  display:inline;
+  float:left;
+}
+.slides .item{width: 680px; overflow: hidden; height: 330px; position: relative;}
+#center .btn{position: absolute; top: 50%; z-index: 999; background: #fff; transform: translateY(-50%); border-radius: 100%; width: 30px; height: 30px; font-weight: bold;}
+#center .btn.left{left: 0;}
+#center .btn.right{right: 0;}
+#center .item .inner{width: 680px; display: flex;}
+.slides .item img{width: 680px; height: 330px;}
+
+.bottom{
+  margin: 30px 0px;
+}
+
+.book{width: 100%; display: flex; margin-top: 30px;}
+.book .item{width: 20%; padding: 0 20px; text-align: center;}
+.book .item img{width: 80%;}
+.book .item a{font-size: 12px; font-weight: bold;}
+.book .cancel{text-decoration: line-through;}
+
+#cat{
+	width: 250px;
+  height: 70px;
+  line-height: 70px;
+	font-size:25px;
+  font-weight: 700;
+  background-color: #768ac7;
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+}
+/*메뉴바*/
+.menu {
+    width: 248px;
+    overflow: hidden;
+    border: 0.5px solid #d3d3d3;
+    display:inline;
+    float:left;
+}  
+.menu > li {
+  width: 100%; 
+  text-align: center;
+  line-height: 60px;
+  background-color: #fff;
+  border: 0.5px solid #d3d3d3; 
+}
+  
+.submenu > li {
+  line-height: 50px;
+  width:100%;
+  background-color: #fff;
+}
+  
+.submenu {
+  height: 0; /*ul의 높이를 안보이게 처리*/
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.menu > li:hover .submenu {
+  height: auto; /*서브메뉴 li한개의 높이 50*5*/
+  visibility: visible;
+  transition-duration: 0.5s;
+}
+
+.menu .submenu > li:hover{
+  background-color:#202946;
+}
+
+.menu .submenu > li:hover a{
+  color: #fff;
+}
+
+/*홍보게시판 및 공지사항, 이용안내*/
+#promo{
+  width: 190px;
+  display:inline;
+  float:right;
+  margin-left: 20px;
+}
+#mainWrapper{
+  display:inline;
+  float:left;
+  width: 200px;
+  text-align:center;
+}
+/*홍보게시판*/
+div #promo_name{
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  background-color: #768ac7;
+  color: #fff;
+  font-weight: 700;
+}
+/*홍보게시판 게시물*/
+#ulTable {
+  margin-top:10px;
+}
+#ulTable > li{
+  width: 200px;
+}
+#ulTable > li > ul {
+  clear:both;
+  position:relative;
+  min-width:40px;
+}
+#ulTable > li > ul > li { 
+  float:left;
+  font-size:11pt;
+  border-bottom:1px solid silver;
+  vertical-align:baseline;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align:center;
+  font-size: 12px;
+  
+}    
+#ulTable > li > ul > li:first-child {
+  width:35px; /*No 열 크기*/
+} 
+#ulTable > li > ul > li:first-child +li {
+  width:165px; /*제목 열 크기*/
+  text-align: left;
+} 
+
+.board_subject a{
+  display:inline-block;
+  padding-left: 5px;
+}
+
+/*공지사항, 이용안내*/
+#button ul li{
+  margin-top: 10px;
+  width: 100%;
+  height: 100px;
+  line-height: 30px;
+  background-color: #768ac7;
+  color: #fff;
+  font-weight: 700;
+  float:left; 
+  display: inline;
+}
+div #button > ul > li:first-child {width:50%;} 
+div #button > ul > li:first-child +li {width:50%;} 
+#button img {
+  margin: 8px;
+  width: 40px;
+  height: 40px;   
+}
+#button ul li a{
+  color: #fff;
+}
+/*인기 중고책*/
+#popular{
+  border: 5px solid #768ac7;
+  width: 100%;
+  height: 280px;
+}
+#popular_name > li{
+  font-size: 20px;
+  font-weight: 700;
+  color: #c85c85;
+}

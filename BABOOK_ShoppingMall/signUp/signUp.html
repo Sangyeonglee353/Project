@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lnag="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title> 세다책 회원가입 </title>
+    <link rel='stylesheet' type='text/css' href='./css/common.css'>
+    <link rel='stylesheet' type='text/css' href='./css/singin.css'>
+
+</head>
+
+<body>
+    <div id="lsy">
+        <!-- gnb_로그인 | 회원가입 | 고객센터 -->
+        <div id="gnb">
+            <ul id="gnb_menu">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </div>
+        <!-- header_top_검색바  -->
+        <div id="top">
+            <ul>
+                <li class="logo">
+                    <a href="#">
+                        <img src="./img/logo.png" alt="main_logo">
+                    </a>
+                </li>
+                <li class="search">
+                    <div class="search_box">
+                        <div class="select">
+                            <div class="option">
+                                <span id="optionName">통합검색</span>
+                            </div>
+                            <div class="optionList">
+                                <ul>
+                                    <li class="optionListItem">통합검색</li>
+                                    <li class="optionListItem">중고장터</li>
+                                    <li class="optionListItem">홍보마당</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p>
+                            <input class="keyword" type="text" placeholder="검색어를 입력해주세요.">
+                            <input class="search_btn" type="image" src="./img/search_blue.png">
+                        </p>
+                    </div>
+                </li>
+                <li class="link">
+                    <a href="#">
+                        <div><img style="margin-left:5px;" src="./img/myPage.png" alt=""></div>
+                        <div>마이페이지</div>
+                    </a>
+                    <a href="#">
+                        <div><img style="margin-left:5px;" src="./img/shopCart.png" alt=""></div>
+                        <div><span style="padding-left:10px;">장바구니</span></div>
+                    </a>
+                    <a href="#">
+                        <div><img style="width:75px;" src="./img/delivery.png" alt=""></div>
+                        <div><span style="padding-left:7px;">주문/배송</span></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- navbar_메뉴 -->
+        <div id="navbar">
+            <nav id="nav_contents">
+                <div class="nav_category">
+                    <a href="#">
+                        <img class="menu_icon" src="./img/menu_white.png" alt="menu_white">
+                    </a>
+                </div>
+                <div id="nav_menu">
+                    <ul>
+                        <li><a href="#">중고 장터</a></li>
+                        <li><a href="#">홍보 마당</a></li>
+                        <li><a href="#">판매 등록</a></li>
+                        <li><a href="#">홍보 등록</a></li>
+                    </ul>
+                </div>
+                <!-- full_menu 메뉴버튼 클릭시 노출 -->
+                <div id="full_menu" class="off">
+                    <ul>
+                        <li>카테고리 1</li><br>
+                        <li>카테고리 2</li><br>
+                        <li>카테고리 3</li><br>
+                        <li>카테고리 4</li><br>
+                        <li>카테고리 5</li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- navbar 아래로 스크롤시 노출 -->
+        <div id="navbar_scroll" class="off">
+            <nav id="nav_sc_contents">
+                <div class="nav_category">
+                    <a href="#">
+                        <img class="menu_icon" src="./img/menu_white.png" alt="menu_white">
+                    </a>
+                </div>
+                <ul>
+                    <li class="sc_logo">
+                        <a href="#">
+                            <img src="./img/logo_sc_book_sm.png" alt="logo_sc">
+                        </a>
+                    </li>
+                    <li class="sc_search">
+                        <input class="keyword" type="text" placeholder="검색어를 입력해주세요.">
+                        <input class="search_btn" type="image" src="./img/search_blue.png">
+                    </li>
+                    <li class="sc_link">
+                        <a href="#">
+                            <img src="./img/myPage_white2.png" alt="sc_mypage">
+                        </a>
+                        <a href="#">
+                            <img src="./img/shopcart_white.png" alt="sc_shopcart">
+                        </a>
+                        <a href="#">
+                            <img src="./img/delivery_white.png" alt="sc_delivery" style="width:50px;">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <script src="./js/common.js"></script>
+    </div>
+    <div id="hsysignin">
+        <div id="member"> SIGN IN </div>
+        <div id="wrap">
+            <div id="content">
+                <!-- 아이디 -->
+                <div>
+                    <h3 class="join_title">
+                        <label for="id">아이디</label>
+                    </h3>
+                    <span class="box int_id">
+                        <input type="text" id="id" placeholder="4~12자리의 영문자, 숫자 / @ # $ 등 특수문자 제외" class="int"
+                            maxlength="20">
+                        <span class="step_url">@babook.com</span>
+                    </span>
+                    <span class="error_next_box"></span>
+                </div>
+
+                <!-- PW1 -->
+                <div>
+                    <h3 class="join_title"><label for="pswd1">비밀번호</label></h3>
+                    <span class="box int_pass">
+                        <input type="password" id="pswd1" class="int" maxlength="20" placeholder="...">
+                        <h4 class="pswd_option">
+                            <span>영문 대문자, 소문자, 숫자, 특수문자를 3가지 이상 조합하여
+                                8자 이상, 20자 이하로 설정하십시오. </span>
+                        </h4>
+                        <span id="alertTxt">사용불가</span>
+                    </span>
+                    <span class="error_next_box"></span>
+                </div>
+
+                <!-- PW2 -->
+                <div>
+                    <h3 class="join_title"><label for="pswd2" input type="password">비밀번호 재확인</label></h3>
+                    <span class="box int_pass_check">
+                        <input type="password" id="pswd2" class="int" maxlength="20">
+                    </span>
+                    <span class="error_next_box"></span>
+                </div>
+
+                <!-- SCHOOL -->
+                <div>
+                    <h3 class="join_title"><label for="name"> 학교명 </label></h3>
+                    <span class="box int_name">
+                        <input type="text" id="name" class="int" maxlength="20">
+                    </span>
+                    <span class="error_next_box"></span>
+                </div>
+
+                <!-- EMAIL -->
+                <div>
+                    <h3 class="join_title"><label for="email">이메일<span class="optional"> (선택) </span></label></h3>
+                    <div id="email_wrap">
+                        <!-- EMAIL_ID -->
+                        <div id="email_id">
+                            <span class="box">
+                                <input type="text" id="id" class="id_int" maxlength="15" placeholder="아이디">
+                            </span>
+                        </div>
+
+                        <div id="email_add"> @</div>
+
+                        <!-- EMAIL_SITE -->
+                        <div id="email_site">
+                            <span class="box">
+                                <input type="text" id="site" class="site_int" maxlength="15" placeholder="사이트">
+                            </span>
+                        </div>
+                        <span class="error_next_box">이메일 주소를 다시 확인해주세요.</span>
+                    </div>
+                </div>
+
+
+                <!-- 개인정보 유효기간 -->
+                <form>
+                    <div>
+                        <h3 class="join_title"><label for="mem">개인정보 유효기간</label></h3>
+                        <label> <input type="radio" name="peroiod" value="1">1년</label>
+                        <label> <input type="radio" name="peroiod" value="3">3년</label>
+                        <label> <input type="radio" name="peroiod" value="5">5년</label>
+                        <label> <input type="radio" name="peroiod" value="10">탈퇴 시까지</label>
+                        <div id="join_add"> 설정된 개인정보 유효기간 동안 로그인 등 이용이 없으면 휴먼계정이 되어
+                            개인정보가 별도 분리 보관, 각종 뉴스레터, 메일, 문자를 수신할 수 없습니다. </div>
+                    </div>
+                </form>
+
+                <!-- 약관 동의 -->
+                <form>
+                    <div>
+                        <h3 class="join_title"><label for="mem_agree"> 약관 동의 </label></h3>
+                        <label for="agree_all">
+                            <input type="checkbox" name="agree_all" id="agree_all">
+                            <script tye="text/javascript" src="js/signin.js"></script>
+                            <span id="agree_add">모든 약관에 동의합니다.</span>
+                        </label>
+                        <div id="agree2_add"> 필수 동의항목 </div>
+
+                        <div class="agree_btn">
+                            <button type="button" id="btnagree" style="float: right;  margin-right: 280px">
+                                <span> 약관 전체보기 》</span>
+                            </button>
+                            <p><label for="agree">
+                                    <input type="checkbox" name="agree" value="1" sytle="float : left">
+                                    <span>세다책 이용약관 </span>
+                                </label></p>
+                        </div>
+
+                        <div class="agree_btn">
+                            <button type="button" id="btnagree" style="float: right;  margin-right: 220px">
+                                <span> 약관 전체보기 》</span>
+                            </button>
+                            <p><label for="agree">
+                                    <input type="checkbox" name="agree" value="2" sytle="float : left">
+                                    <span>세다책 커뮤니티 이용약관 </span>
+                                </label></p>
+                        </div>
+
+                        <div class="agree_btn">
+                            <button type="button" id="btnagree" style="float: right;  margin-right: 260px">
+                                <span> 내용 보기 》</span>
+                            </button>
+                            <p><label for="agree">
+                                    <input type="checkbox" name="agree" value="3" sytle="float : left">
+                                    <span> 개인 정보 수집 및 이용 </span>
+                                </label></p>
+                        </div>
+
+
+                        <div id="agree2_add"> 선택 동의항목 </div>
+
+                        <div class="agree_btn">
+                            <button type="button" id="btnagree" style="float: right;  margin-right: 140px">
+                                <span> 내용 보기 》</span>
+                            </button>
+                            <p><label for="agree">
+                                    <input type="checkbox" name="agree" value="4" class="agree">
+                                    <span>선택적 개인 정보 수집 및 이용, 제공에 동의 <strong div id="all_add" class="select_disable">
+                                        </strong></span>
+                                </label></p>
+
+                            <p><label for="agree">
+                                    <input type="checkbox" name="agree" value="5" class="agree">
+                                    <span> 메일 <strong class="select_disable"></strong></span>
+                                </label></p>
+                            <p><label for="agree">
+                                    <input type="checkbox" name="agree" value="6" class="agree">
+                                    <span> 앱 푸시 <strong class="select_disable"></strong></span>
+                                </label></p>
+                            <p><label for="agree">
+                                    <input type="checkbox" name="agree" value="7" class="agree">
+                                    <span> 문자/ 카카오톡 <class="select_disable"></span>
+                                </label></p>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- JOIN BTN-->
+                <div class="btn_area">
+                    <button type="button" id="btnJoin">
+                        <span>가입하기</span>
+                    </button>
+                </div>
+
+            </div>
+            <!-- content-->
+
+            <script src="./js/signin.js"></script>
+
+        </div>
+    </div>
+
+    <div id="scl_top" class="fixed">
+        <a href="#top" class="sclTopbtn">
+            <img src="./img/ico_top.svg" alt="ico_top">
+        </a>
+    </div>
+    <div id="footer_wrap">
+        <div id="footer_top">
+            <ul id="top_menu">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">청소년 보호정책</a></li>
+                <li><a href="#">채용정보</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">도서홍보 안내</a></li>
+                <li><a href="#">광고안내</a></li>
+            </ul>
+            <ul id="sns">
+                <li>
+                    <a href="#">
+                        <img src="./img/logo_kakao.png" alt="kakao_img">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./img/logo_facebook.png" alt="facebook_img">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./img/logo_twitter.png" alt="twitter_img">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./img/logo_instagram.png" alt="instagram_img">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="footer_contents">
+            <div id="footer_logo">
+                <img src="./img/logo_gray.png" alt="logo_gray">
+            </div>
+            <div id="author">
+                <p>
+                    <span style="font-size: 14px;"><b>바북(주)</b></span><br>
+                    [31253] 충청남도 천안시 동남구 병천면 충절로 1600 (가전리, 한국기술교육대학교)<br>
+                    대표: 이상영 개인정보보호 책임자: 박건우 babookHelper@babook.com<br>
+                    사업자 등록번호: 0023-1-52123 통신판매업신고: 제 2022-00011호<br>
+                    호스팅 서비스사업자: 바북(주)<br>
+                    Copyright © BABOOK Corp. All Rights Reserved.
+                </p>
+            </div>
+            <div id="customer_sv">
+                <div id="inqury">
+                    <p><b>고객문의</b><br>
+                        1566-7700
+                    </p>
+                </div>
+                <div id="tel_icon">
+                    <img src="./img/phone_white.png" alt="phone_img">
+                </div>
+                <div id="inqury_menu">
+                    <ul>
+                        <li><a href="#">1:1 문의하기 ></a></li>
+                        <li><a href="#">자주 묻는 질문 ></a></li>
+                        <li><a href="#">상담시간 안내 ></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="footer_bottom">
+            <img src="./img/footer_bottom_img.png" alt="footer_bottom_img">
+        </div>
+    </div>
+
+</body>
+
+</html>

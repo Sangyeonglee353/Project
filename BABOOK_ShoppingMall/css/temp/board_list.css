@@ -1,0 +1,345 @@
+/*전체적인 레이아웃  */
+#warpped_board_list_body {
+    height : 1400px;
+}
+
+#board_list_body {
+    width : 1000px;
+    height : 700px;
+    display : flex;
+    flex-direction: row;
+    margin:0 auto; 
+}
+
+.left_aside {
+    margin-top : 2%;
+    width : 18%;
+    margin-right : 2%;
+}
+
+.contents {
+    margin-top : 1.5%;
+    width : 78%;
+    margin-left : 2%;
+}
+/*전체적인 레이아웃 */
+
+/* 좌측 비로가기 아이콘         start */
+
+.shortcut_icon {
+    background : #768AC7;
+    height : 22.5%;
+}
+
+.sell_icon_a {
+    margin-left : 20%;
+    width : 60%;
+    height : 50%;
+    background: #768AC7;
+
+    border-bottom : 1.5px solid gray;
+    /* 이미지 정가운데정렬 */
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.notice_icon_a {
+    float : left;
+    height : 50%;
+    width : 50%;
+    background : #768AC7;
+
+    box-shadow : -0.75px 0 0 gray inset;
+    /* 이미지 정가운데정렬 */
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.question_icon_a {
+    float : left;
+    height : 50%;
+    width : 50%;
+    background : #768AC7;
+
+    box-shadow : 0.75px 0 0 gray inset;
+    /* 이미지 정가운데정렬 */
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.shortcut_icon img {height : 85%;}
+
+/* 좌측 비로가기 아이콘         end */
+/* 좌측 카테고리                start */
+
+.left_category {
+    width: 100%;
+    height:77.5%;
+}
+
+.left_category_text {
+    height : 12.5%;
+    background-color :#39669a;
+    text-align :center;
+    color : white;
+    font-size : 18pt;
+    line-height : 280%;  /*세로 정렬*/
+}
+
+.left_category_list {
+    height : 87.5%;
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+}
+.left_category_list a {    color : #726161;}
+
+
+.left_category_list li{
+    height : 12.5%;
+    text-align : center;
+    font-size : 11pt;
+    font-weight :bold;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+/* 좌측 카테고리                end */
+/* 메인 카테고리                start */
+
+.content_cateogry_text {
+    margin-top : 3%;
+    height : 3%;
+    font-size : 12pt;
+}
+
+.content_category {
+    margin-top : 1%;
+    height : 13%;
+    background-color : #e8e8e8;
+    display : flex;
+    flex-direction : column;
+    justify-content : space-around;
+}
+
+.content_category_list {
+    display : flex;
+    height : 45%;
+    justify-content : space-around;
+    align-items : center;
+}
+
+.content_category li {
+    width : 16.6667%;
+    text-align : center;
+    font-size : 9pt;
+    font-weight : bold;
+    border-right : solid gray 1.5px;
+}
+
+.content_last_category_li {    border : 0 !important; /*마지막 li요소 bar 제거*/}
+
+/* 메인 카테고리                end */
+/* 메인 정렬                   start */
+
+.content_sort_menu {
+    margin-top : 1.7%;
+    height : 10%;
+    background-color : #e8e8e8;
+}
+
+.content_sort_list {
+    display :flex;
+}
+
+.content_sort_list {
+    display : flex;
+    height : 60%;
+    align-items : center;
+}
+.content_sort_list li{
+    width : 12.5%;
+    font-size : 9pt;
+    font-weight : bold;
+    border-right : solid gray 1.5px;
+    text-align : center;
+}
+
+/* 메인 정렬                   end */
+/*페이징 박스                  start*/
+
+.top_paging_box{
+    display : flex;
+    /* background : yellow; */
+    margin-top : 0.1%;
+    justify-content : center;
+}
+
+.pasing_num_list{
+    display : flex;
+    width : 50%;
+    height : 100%;
+    justify-content : space-around;
+}
+
+.pasing_num_list a {
+    font-size : 9.5pt;
+    font-weight : bold;
+}
+
+/*페이징 박스                  end*/
+/*책 판매 리스트               start*/
+
+.sale_list {
+    margin-top : 4%;
+    height : 160%;
+    /* background: rgb(255, 238, 241); */
+}
+
+.sale_list_ul {
+    height : 90%;
+}
+
+.sale_list_detail {
+    width : 100%;
+    height : 20%;
+    box-shadow : 0px -2px 0 gray inset; /*하단 구분선*/
+    display : flex;
+}
+
+.cover {
+    height : 100%;
+    width : 22.5%;
+    /* background : green; */
+    display :flex;
+}
+
+.book_information {
+    height : 100%;
+    width : 55%;
+    /* background : yellow; */
+}
+
+.buy_button_group {
+    height : 100%;
+    width : 22.5%;
+    /* background : purple; */
+}
+
+.buy_checkbox {
+    margin-top : 10%;
+    width : 10%;
+    height : 10%;
+}
+
+.book_picture_a {
+    margin-top : 10%;
+    margin-left : 10%;
+    margin-right : 10%;
+    width : 60%;
+    height : 80%;
+}
+
+.book_picture_a img {
+    width : 100%;
+    height : 100%;
+}
+
+.book_title {
+    font-weight : bold;
+    font-size : 16pt;
+    margin-top : 5%;
+}
+
+.book_title:hover {
+    text-decoration:underline;
+}
+
+.book_author {
+    display : block;
+    font-size : 9pt;
+    margin-top : 2%;
+    color :#726161
+}
+
+.book_info_detail_block {
+    display  : blcok;
+}
+
+.book_info_detail {
+    display : inline-block;
+    margin-top : 1%;
+    padding-right : 2%;
+    font-size : 10pt;
+    font-weight : 650;
+    border-right : solid gray 1.5px;
+}
+
+.registration_date {
+    display : block;
+    margin-top : 2%;
+    font-size : 10pt;
+    font-weight : 650;
+}
+
+.price_block {
+    margin-top : 4%;
+}
+
+.original_price {
+    font-size : 18pt;
+    color:red;
+    font-weight: bold;
+}
+
+.price_block span {
+    font-size : 18pt;
+    font-weight: bold;
+}
+
+.add_to_shopping_bag_btn {
+    display : flex;
+    position : relative;
+    left : 10%;
+    top : 42.5%;
+    height : 15%;
+    width : 80%;
+    background :#39669a;
+    justify-content:center;
+    align-items:center;
+    border-radius : 9px;
+    color : white !important;
+    font-size : 12pt;
+    font-weight : bold;
+}
+
+.buy_right_now_btn {
+    display : flex;
+    position : relative;
+    left : 10%;
+    top : 52.5%;
+    height : 15%;
+    width : 80%;
+    background :#768AC7;
+    justify-content:center;
+    align-items:center;
+    border-radius : 9px;
+    color : white !important;
+    font-size : 12pt;
+    font-weight : bold;
+}
+
+/*책 판매 리스트               end*/
+/* bottom paging box           start  */
+
+.bottom_paging_box{
+    display : flex;
+    margin-top : 6%;
+    justify-content : center;
+}
+
+/* bottom paging box           end  */

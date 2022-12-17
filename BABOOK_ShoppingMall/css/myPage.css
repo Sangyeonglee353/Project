@@ -1,0 +1,49 @@
+#contents{
+    width: 1200px;
+    margin:10px auto 10px auto;
+    z-index:0;
+    position:relative;
+    overflow:hidden;
+}
+#myPage_sidebar{
+    display:inline;
+    float:left;
+    border: 1px solid #ccc;
+    width: 209px;
+}
+#myPage_sidebar > h2{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 11px;
+    background-color: #39669a;
+    color: white;
+}
+#myPage_sidebar .myPageMenuDl{
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 11px;
+    width: 153px;
+    text-align:left;
+}
+#myPage_sidebar .myPageMenuDl dt{
+    line-height: 20px;
+    font-weight: bold;
+    color: #454545;
+    font-size: 13px;
+    letter-spacing: -1px;
+}
+#myPage_sidebar .myPageMenuDl dd ul li{
+    padding: 2px 0 1px 7px !important;
+    line-height: 18px !important;
+    text-indent: -7px !important;
+    color: #666;
+    font-size: 12px;
+    border: none !important;
+    text-align: left;
+}
+#promo_list{
+    display:inline;
+    float:left;
+    width: 900px;
+    padding: 50px 20px;
+}

@@ -1,0 +1,112 @@
+#lsy{background: #fff;}
+
+.member {
+    font-size: 56px;
+    color: #768ac7;
+    margin: auto;
+    margin-top : 100px;
+    text-transform: capitalize;
+    font-family: "본고딕";
+    font-weight: bold;
+    /*margin-top:65px;*/
+}
+
+body {
+    font-family: "본고딕";
+    font-size: 14px;
+    background: #f6f6f6;
+}
+
+/*둘레 크기 확인*/
+.form {
+    width: 500px;
+    height: 200px;
+    /*border: 1px double #999;*/
+}
+
+
+.form2 {
+    /*크기 조정으로 회원가입 버튼 옆으로 세움*/
+    width: 100%;
+    min-width: 500px;
+    /**/
+    margin: 10px auto;
+    margin-left: 0px;
+    margin-bottom: 250px;
+}
+
+/*아이디, 비밀번호 입력 영역*/
+.form3 {
+    float: left;
+    text-align: left;
+    width: 300px;
+    height: 50px;
+    border : none;
+    line-height: 50px;
+}
+
+.form3 img {
+    width: 30px;
+    height: 30px;
+    background-color: #b7b7d8;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+
+.form3 input {
+    text-align: left;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border-style:solid;  /*두께 일정하게 유지*/
+    border-color: #cccccc;
+    outline:none; /*눌렀을 때 두꺼워짐 없애기*/
+    /*  display: block; */
+
+}
+
+/*로그인 창 크기 조절*/
+#wrap {
+    width: 400px;
+    margin: auto;
+}
+
+.clear {
+    clear: both;
+}
+
+/*로그인 버튼*/
+.log input[type="button"] {
+    float: left;
+    margin-top: 7px;
+    /*  display:block; */
+    font-family: "본고딕";
+    font-size: 24px;
+    font-weight: bold;
+    height: 90px;
+    width: 100px;
+    color: white;
+    background: #768ac7;
+    border-radius: 5px;
+    border: none;
+}
+
+/*회원가입, 찾기 버튼*/
+.form4 input[type="button"] {
+    height: 30px;
+    background: #b7b7d8;
+    width: 198px;
+    color: white;
+    font-family: "본고딕";
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 2px;
+    border-radius: 5px;
+    border: none;
+}

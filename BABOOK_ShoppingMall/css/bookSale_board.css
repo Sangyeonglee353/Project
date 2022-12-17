@@ -1,0 +1,929 @@
+/* 판매 등록&수정 페이지 (board_form.php, board_modify_form.php)      Start */
+
+
+/* 기본 셋팅 */
+
+#form_content {
+  width : 1200px;
+  margin : 0 auto;
+}
+
+#form_content h1 {
+  color :rgb(75, 69, 69);
+  text-align : center;
+  font-size : 18pt;
+  padding-top : 20px;
+  margin-top : 15px;
+  margin-bottom : 15px;
+}
+
+#form_content strong {
+  font-size : 15pt;
+  margin-right : 5%;
+  width : 20%;
+  font-weight :400;
+  text-align : center;
+}
+
+.next_button_div {
+  display : flex;
+  height : 52.5px;
+  align-items : center;
+  flex-direction : row;
+  justify-content : center;
+}
+
+.next_button {
+  border : 0;
+  border-radius : 9px;
+  background-color : #768AC7;
+  width : 15%;
+  height : 60%;
+  margin-left : 5%;
+  margin-right : 2%;
+  color : rgba(255, 255, 255, 0.846);;
+  font-weight : bold;
+}
+
+.next_button:hover {
+  cursor : pointer;
+}
+/*
+.jump_button {
+  border : 0;
+  border-radius : 9px;
+  background-color :rgb(145, 175, 199);
+  width : 15%;
+  height : 60%;
+  margin-left : 2%;
+  color : rgba(255, 255, 255, 0.912);;
+  font-weight : bold; 
+}
+
+.jump_button:hover {
+  cursor : pointer;
+}
+*/
+.input_box {
+  width : 70%;
+  height : 70%;
+  text-align : center;
+  font-size : 15pt;
+}
+
+/* 책 정보 입력 */
+
+#form_content .book_information {
+  margin-top : 3%;
+  margin-left : 20%;
+  width : 60%;
+  border-bottom : solid rgb(166, 164, 164) 3px;
+  margin-bottom : 3%;
+  background : rgb(248, 248, 251);
+}
+
+.book_name, .author_name, .publisher_name, .book_status, .book_category {
+  display : flex;
+  height : 52.5px;
+  flex-direction : row;
+  align-items : center;
+}
+
+.book_status label {
+  font-size : 15pt;
+  margin-right : 12%;
+}
+
+/* 수업 정보 입력 */
+
+.class_information {
+  display : none;
+  margin-left : 20%;
+  width : 60%;
+  border-bottom : solid rgb(166, 164, 164) 3px;
+  margin-bottom : 3%;
+  background : rgb(248, 248, 251);
+}
+
+.professor_name , .class_name , .semester_infor , .university_name{
+  height : 52.5px;
+  display : flex; 
+  flex-direction : row;
+  align-items : center;
+}
+
+.semester_text {
+  margin-right : 1.6% !important;
+}
+
+/* 책 이미지 정보 입력 */
+.img_information {
+  display : none;
+  margin-left : 20%;
+  width : 60%;
+  border-bottom : solid rgb(166, 164, 164) 3px;
+  margin-bottom : 3%;
+  background : rgb(248, 248, 251);
+}
+
+.book_img_container {
+  display : flex;
+  flex-direction : row;
+  justify-content : center;
+  justify-content : space-around;
+  margin-bottom : 15px;
+}
+
+.book_img_input {
+  width : 0px;
+  height : 0px;
+  opacity: 0;
+}
+
+.book_img_label {
+  display :flex;
+  flex-direction : row;
+  width: 130px;
+  height : 150px;
+  border: 2px dashed grey;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content : center;
+  align-items : center;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size : cover;
+}
+
+.book_img_label:hover {
+  border: 2px solid rgb(143, 150, 167);
+}
+
+/* 책 판매 정보 입력 */
+
+.sale_information {
+  display : none;
+  margin-top : 3%;
+  margin-left : 20%;
+  width : 60%;
+  border-bottom : solid rgb(166, 164, 164) 3px;
+  margin-bottom : 3%;
+  background : rgb(248, 248, 251);
+}
+
+.sale_unit {
+  position : relative;
+  right : 5%;
+  font-size : 15pt;
+  font-weight : bolder;
+  color : #bebebe;
+}
+
+.sale_price, .way_to_sale , .book_original_price {
+  height : 52.5px;
+  display : flex; 
+  flex-direction : row;
+  align-items : center;
+}
+
+.way_to_sale label {
+  font-size : 14pt;
+  margin-right : 22.5%;
+}
+
+#dealing_place {
+  display : none; 
+  height : 52.5px;
+  flex-direction : row;
+  align-items : center;
+}
+
+#shipping_fee {
+  display : none;
+  height : 52.5px;
+  flex-direction : row;
+  align-items : center;
+}
+
+/* 추가설명 입력 */
+
+.additional_explanation {
+  display : none;
+  margin-top : 3%;
+  margin-left : 20%;
+  width : 60%;
+  border-bottom : solid rgb(166, 164, 164) 3px;
+  margin-bottom : 3%;
+  background : rgb(248, 248, 251);
+}
+
+.additional_explanation textarea {
+  padding : 10px;
+  font-size : 11pt;
+  width : 70%;
+  height : 180px;
+  margin-left : 15%;
+}
+
+/* 판매 등록 페이지 (board_form.php)      End */
+/* 판매 목록 페이지 (board_list.php)      Start */
+
+/*전체적인 레이아웃  */
+#warpped_board_list_body {
+  height : 1400px;
+}
+
+#board_list_body {
+  width : 1200px;
+  height : 700px;
+  display : flex;
+  flex-direction: row;
+  margin:0 auto; 
+}
+
+.left_aside {
+  margin-top : 2%;
+  width : 18%;
+  margin-right : 2%;
+}
+
+.contents {
+  margin-top : 1.5%;
+  width : 78%;
+  margin-left : 2%;
+}
+/*전체적인 레이아웃 */
+
+/* 좌측 비로가기 아이콘         start */
+
+.shortcut_icon {
+  background : #768AC7;
+  height : 22.5%;
+}
+
+.sell_icon_a {
+  margin-left : 20%;
+  width : 60%;
+  height : 50%;
+  background: #768AC7;
+
+  border-bottom : 1.5px solid gray;
+  /* 이미지 정가운데정렬 */
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.notice_icon_a {
+  float : left;
+  height : 50%;
+  width : 50%;
+  background : #768AC7;
+
+  box-shadow : -0.75px 0 0 gray inset;
+  /* 이미지 정가운데정렬 */
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.question_icon_a {
+  float : left;
+  height : 50%;
+  width : 50%;
+  background : #768AC7;
+
+  box-shadow : 0.75px 0 0 gray inset;
+  /* 이미지 정가운데정렬 */
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.shortcut_icon img {height : 85%;}
+
+/* 좌측 비로가기 아이콘         end */
+/* 좌측 카테고리                start */
+
+.left_category {
+  width: 100%;
+  height:77.5%;
+}
+
+.left_category_text {
+  height : 12.5%;
+  background-color :#39669a;
+  text-align :center;
+  color : white;
+  font-size : 18pt;
+  line-height : 280%;  /*세로 정렬*/
+}
+
+.left_category_list {
+  /* height : 87.5%; */
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
+}
+.left_category_list a {    color : #726161;}
+
+
+.left_category_list li{
+  padding-top : 10%;
+  padding-bottom : 10%;
+  height : 12.5%;
+  text-align : center;
+  font-size : 11pt;
+  font-weight :bold;
+  display : flex;
+  justify-content : center;
+  align-items : center;
+}
+
+/* 좌측 카테고리                end */
+/* 메인 카테고리                start */
+
+.content_cateogry_text {
+  margin-top : 3%;
+  height : 3%;
+  font-size : 12pt;
+}
+
+.content_category {
+  margin-top : 1%;
+  height : 13%;
+  background-color : #e8e8e8;
+  display : flex;
+  flex-direction : column;
+  justify-content : space-around;
+}
+
+.content_category_list {
+  display : flex;
+  height : 45%;
+  align-items : center;
+}
+
+.content_category_top_list , .content_category_bottom_list{
+  width : 16.4%;
+  text-align : center;
+  font-size : 9pt;
+  font-weight : bold;
+  border-right : solid gray 1.5px;
+}
+
+.content_category_top_list:last-child {
+  border-right : 0px;
+}
+
+.content_category_bottom_list:last-child {
+  border-right : 0px;
+}
+/* 메인 카테고리                end */
+/* 메인 정렬                   start */
+
+.content_sort_menu {
+  margin-top : 1.7%;
+  height : 10%;
+  background-color : #e8e8e8;
+}
+
+.content_sort_list {
+  display :flex;
+}
+
+.content_sort_list {
+  display : flex;
+  height : 60%;
+  align-items : center;
+}
+.content_sort_list li{
+  width : 12.5%;
+  font-size : 9pt;
+  font-weight : bold;
+  border-right : solid gray 1.5px;
+  text-align : center;
+}
+
+.content_sort_list li:last-child{
+  border-right : solid gray 0px;
+}
+
+/* 메인 정렬                   end */
+/*페이징 박스                  start*/
+
+.top_paging_box{
+  display : flex;
+  /* background : yellow; */
+  margin-top : 0.1%;
+  justify-content : center;
+}
+
+.pasing_num_list{
+  display : flex;
+  width : 50%;
+  height : 100%;
+  justify-content : space-around;
+}
+
+.pasing_num_list a {
+  font-size : 9.5pt;
+  font-weight : bold;
+}
+
+/*페이징 박스                  end*/
+/*책 판매 리스트               start*/
+
+.sale_list {
+  margin-top : 4%;
+  height : 160%;
+  /* background: rgb(255, 238, 241); */
+}
+
+.sale_list_ul {
+  height : 90%;
+}
+
+.sale_list_detail {
+  width : 100%;
+  height : 20%;
+  box-shadow : 0px -2px 0 gray inset; /*하단 구분선*/
+  display : flex;
+}
+
+.cover {
+  height : 100%;
+  width : 22.5%;
+  /* background : green; */
+  display :flex;
+}
+
+.book_information {
+  height : 100%;
+  width : 55%;
+  /* background : yellow; */
+}
+
+.buy_button_group {
+  height : 100%;
+  width : 22.5%;
+  /* background : purple; */
+}
+
+.buy_checkbox {
+  margin-top : 10%;
+  width : 10%;
+  height : 10%;
+}
+
+.book_picture_a {
+  margin-top : 10%;
+  margin-left : 10%;
+  margin-right : 10%;
+  width : 60%;
+  height : 80%;
+}
+
+.book_picture_a img {
+  width : 100%;
+  height : 100%;
+}
+
+.book_title {
+  font-weight : bold;
+  font-size : 16pt;
+  margin-top : 5%;
+}
+
+.book_title:hover {
+  text-decoration:underline;
+}
+
+.book_author {
+  display : block;
+  font-size : 9pt;
+  margin-top : 2%;
+  color :#726161
+}
+
+.book_info_detail_block {
+  display  : blcok;
+}
+
+.book_info_detail {
+  display : inline-block;
+  margin-top : 1%;
+  padding-left : 0.8%;
+  padding-right : 2%;
+  font-size : 10pt;
+  font-weight : 650;
+  border-right : solid gray 1.5px;
+}
+
+.book_info_detail:first-child{
+  padding-left : 0%;
+}
+
+.registration_date {
+  display : block;
+  margin-top : 2%;
+  font-size : 10pt;
+  font-weight : 650;
+}
+
+.price_block {
+  margin-top : 4%;
+}
+
+.original_price {
+  color : red;
+  font-size : 18pt;
+  font-weight: bold;
+}
+
+.price_block span {
+  font-size : 18pt;
+  font-weight: bold;
+}
+
+.buy_button_group .add_to_shopping_bag_btn {
+  display : flex;
+  position : relative;
+  left : 10%;
+  top : 42.5%;
+  height : 15%;
+  width : 80%;
+  background :#39669a;
+  justify-content:center;
+  align-items:center;
+  border-radius : 9px;
+  color : white !important;
+  font-size : 12pt;
+  font-weight : bold;
+}
+
+.buy_button_group .buy_right_now_btn {
+  display : flex;
+  position : relative;
+  left : 10%;
+  top : 52.5%;
+  height : 15%;
+  width : 80%;
+  background :#768AC7;
+  justify-content:center;
+  align-items:center;
+  border-radius : 9px;
+  color : white !important;
+  font-size : 12pt;
+  font-weight : bold;
+}
+
+/*책 판매 리스트               end*/
+/* bottom paging box           start  */
+
+.bottom_paging_box{
+  display : flex;
+  margin-top : 6%;
+  justify-content : center;
+}
+
+/* bottom paging box           end  */
+
+/* 판매 목록 페이지 (board_list.php)      end */
+/* 판매 내용(상세) 페이지 (board_view.php)      Start */
+
+/* 주요 레이아웃 */
+
+#wrap {
+  width : 1200px;
+  height : 1000px;
+  margin : 0 auto;
+}
+
+#category_path {
+  margin-top : 2%;
+  /* background : pink; */
+  height : 4.5%;
+  border-bottom : solid 2px rgb(208, 199, 199);
+}
+
+#sale_div {
+  margin-top : 3%;
+  display : flex;
+  flex-direction : row;
+  height : 58.5%;
+  /* background : yellow; */
+}
+
+#additional_explanation {
+  margin-top : 2%;
+  height : 25%;
+  border-top : solid 2px rgb(208, 199, 199);
+  border-bottom : solid 2px rgb(208, 199, 199);
+}
+
+
+#sale_image {
+  width : 40%;
+  height : 100%;
+  margin-bottom : 5%;
+  /* background-color : skyblue; */
+}
+
+#sale_information {
+  margin-left : 7.5%;
+  width : 52.5%;
+  height : 100%;
+  /* background-color : rgb(238, 221, 238); */
+}
+
+/* 상단 카테고리 경로 */
+
+#category_path ul{
+  display : flex;
+  align-items :center;
+  height : 100%;
+  font-weight : 500;
+  color : rgb(49, 47, 47);
+  padding-left : 2%;
+}
+
+#category_path li{
+  font-size : 12pt;
+}
+
+  /* 판매 이미지 */
+.img_cover {
+  margin-left : 20%;
+  width : 60%;
+  height : 70%;
+}
+
+#main_image {
+  width : 100%;
+  height : 100%;
+}
+
+.img_container {
+  margin-top : 8%;
+  display : flex;
+  height : 20%;
+  /* background : rgb(220, 205, 109); */
+  justify-content: center;
+  align-items :center;
+}
+
+.sub_image {
+  outline : solid rgb(237, 227, 227) 2px;
+  width : 15%;
+  height : 80%;
+  margin-left : 2.5%;
+  margin-right : 2.5%;
+  padding : 0.5%;
+}
+
+.sub_image:first-child {
+  outline : solid rgb(48, 45, 45) 2px;
+  width : 15%;
+  height : 80%;
+  margin-left : 2.5%;
+  margin-right : 2.5%;
+}
+
+.sub_image:hover {
+  cursor : pointer;
+  outline : solid rgb(48, 45, 45) 2px;
+}
+
+/* 판매 정보 head (책 제목, 저자 . .)*/
+
+#sale_information h1{
+  margin-top : 6%;
+  font-size : 25pt;
+}
+
+.author_box {
+  display : flex;
+  margin-top : 2%;
+  width : 100%;
+  height : 5%;
+  /* background : yellow; */
+  align-items : center;
+  padding-bottom : 1.5%;
+  border-bottom : solid 1.5px rgb(208, 199, 199);
+}
+
+.author_box li {
+  font-size : 12pt;
+  color : rgb(110, 102, 102);
+  padding-right : 2%;
+  padding-left : 2%;
+  border-right : 1px solid gray;
+  font-weight : 500;
+}
+
+.last_li {
+  border-right : 0px !important; 
+}
+
+.first_li {
+  padding-left : 0% !important;
+}
+
+/* 판매 정보 middle (수업 정보, 가격, 배송 ..)*/
+
+.information_group_middle {
+  float : left;
+  margin-top : 4%;
+  width : 65%;
+  height : 65%;
+  /* background : rgb(190, 183, 183); */
+}
+.line_block {
+  display : flex;
+  align-items: center;
+  height : 10%;
+  /* background : green; */
+  margin-bottom : 3%;
+}
+.left_span {
+  width : 22.5%;
+  /* background : yellow; */
+  font-size : 13pt;
+  color : rgb(89, 84, 84);
+}
+
+.right_span {
+  width : 70%;
+  /* background : skyblue; */
+  font-size : 13pt;
+  color : rgb(49, 45, 45);
+  font-weight : bold;
+}
+
+#line4 {
+  border-bottom : solid 1.5px rgb(208, 199, 199);
+  padding-bottom : 4%;
+}
+
+.right_span_year , .right_span_semester{
+  width : 18%;
+  /* background : yellow; */
+  font-size : 13pt;
+  color : rgb(49, 45, 45);
+  margin-right : 10%;
+  font-weight : bold;
+}
+
+.right_span_original_price {
+  width : 25%;
+  /* background : yellow; */
+  font-size : 16pt;
+  font-weight : 600;
+  color : rgb(213, 44, 44);
+  text-decoration :line-through;
+}
+
+.small_span_sale_price {
+  width : 35%;
+  /* background : yellow; */
+  font-size : 20pt;
+  font-weight :bold;
+}
+
+/* db에서 받아오는 데이터에 따라서 보여줄지 유무 결정
+  판매 방법이 직거래면 #trading_place를 보여주고 판매방법이 택배거래면 #shipping_fee_view를 보여준다 */
+#shipping_fee_view , #trading_place {
+  display : none;
+}
+
+/* 버튼 모음 */
+.button_group {
+  float : left;
+  margin-top : 4%;
+  width : 30%;
+  margin-left : 2%;
+  height : 65%;
+  border-left : solid 1.5px rgb(208, 199, 199);
+  /* background : yellow */
+}
+
+.button_group .add_to_shopping_bag_btn {
+  display : flex;
+  height : 20%;
+  width : 90%;
+  margin-left : 10%;
+  background :#39669a;
+  justify-content:center;
+  align-items:center;
+  border-radius : 9px;
+  color : white !important;
+  font-size : 12pt;
+  font-weight : bold;
+}
+
+.button_group .buy_right_now_btn {
+  display : flex;
+  margin-top : 10%;
+  margin-left : 10%;
+  height : 20%;
+  width : 90%;
+  background :#768AC7;
+  justify-content:center;
+  align-items:center;
+  border-radius : 9px;
+  color : white !important;
+  font-size : 12pt;
+  font-weight : bold;
+}
+
+/* 추가설명(판매자의 말) */
+
+#additional_explanation h1{
+  font-size : 18pt;
+  margin-top : 1%;
+  padding-bottom : 1%;
+  padding-left : 3%;
+  border-bottom : solid 1px rgb(208, 199, 199);
+}
+
+#additional_explanation p {
+  margin-top : 1%;
+  width : 100%;
+  white-space : pre-line;
+  padding-left : 3%;
+  text-align : justify;
+}
+
+/* 판매 내용(상세) 페이지 (board_view.php)      End */
+/* 판매 수정 페이지 (board_modify_form.php)      Start */
+
+#modify_form_content {
+  width : 1200px;
+  margin : 0 auto;
+}
+
+#modify_form_content h1 {
+  color :rgb(75, 69, 69);
+  text-align : center;
+  font-size : 18pt;
+  padding-top : 20px;
+  margin-top : 15px;
+  margin-bottom : 15px;
+}
+
+#modify_form_content strong {
+  font-size : 15pt;
+  margin-right : 5%;
+  width : 20%;
+  font-weight :400;
+  text-align : center;
+}
+
+#modify_form_content .book_information {
+  display:block;
+  margin-top : 3%;
+  margin-left : 20%;
+  width : 60%;
+  border-bottom : solid rgb(166, 164, 164) 3px;
+  margin-bottom : 3%;
+  background : rgb(248, 248, 251);
+}
+
+#modify_form_content .class_information {
+  display:block;
+  margin-left : 20%;
+  width : 60%;
+  border-bottom : solid rgb(166, 164, 164) 3px;
+  margin-bottom : 3%;
+  background : rgb(248, 248, 251);
+}
+
+#modify_form_content .img_information {
+  display:block;
+  margin-left : 20%;
+  width : 60%;
+  border-bottom : solid rgb(166, 164, 164) 3px;
+  margin-bottom : 3%;
+  background : rgb(248, 248, 251);
+}
+
+#modify_form_content .sale_information {
+  display:block;
+  margin-top : 3%;
+  margin-left : 20%;
+  width : 60%;
+  border-bottom : solid rgb(166, 164, 164) 3px;
+  margin-bottom : 3%;
+  background : rgb(248, 248, 251);
+}
+
+#modify_form_content .additional_explanation {
+  display : block;
+  margin-top : 3%;
+  margin-left : 20%;
+  width : 60%;
+  border-bottom : solid rgb(166, 164, 164) 3px;
+  margin-bottom : 3%;
+  background : rgb(248, 248, 251);
+}
